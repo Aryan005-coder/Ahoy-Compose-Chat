@@ -14,15 +14,17 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-@OptIn(ExperimentalMaterial3Api::class) // <-- FIX: Add this annotation here
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DashboardScreen(
-    users: List<ChatUser>,
-    onChatClick: (ChatUser) -> Unit = {}
+    onChatClick: (ChatUser) -> Unit,
+    onLogout: () -> Unit
 ) {
+    // TEMP: will come from DashboardViewModel later
+    val users = emptyList<ChatUser>()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -35,12 +37,20 @@ fun DashboardScreen(
                     text = "Ahoy",
                     fontWeight = FontWeight.Bold
                 )
+            },
+            actions = {
+                TextButton(onClick = onLogout) {
+                    Text("Logout")
+                }
             }
         )
 
         LazyColumn {
             items(users) { user ->
-                ChatRow(user = user, onClick = { onChatClick(user) })
+                ChatRow(
+                    user = user,
+                    onClick = { onChatClick(user) }
+                )
             }
         }
     }
@@ -105,11 +115,3 @@ data class ChatUser(
     val lastMessage: String,
     val time: String
 )
-
-@OptIn(ExperimentalMaterial3Api::class) // <-- FIX: Also add here for the preview
-@Preview(showBackground = true)
-@Composable
-fun DashboardScreenPreview() {
-    // Example data for a better preview
-    DashboardScreen(users = emptyList())
-}
