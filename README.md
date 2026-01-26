@@ -1,115 +1,82 @@
-Ahoy – Jetpack Compose Chat App 🚀
+<div align="center">
 
-Ahoy is a modern Android chat application built using Jetpack Compose and Navigation Compose, focused on clean UI, state-driven navigation, and production-ready architecture.
+# 🚀 Ahoy — Jetpack Compose Chat App
 
-This project is actively developed as a real-world chat app foundation, not a demo or tutorial clone.
+**A modern, scalable Android chat application built with Jetpack Compose  
+focused on clean architecture, state-driven navigation, and real-world patterns.**
 
-✨ Features
+</div>
 
-📱 Modern UI built with Jetpack Compose (Material 3)
+---
 
-🧭 State-driven navigation using Navigation Compose
+## ✨ Overview
 
-🔐 Authentication flow using ViewModel-managed auth state
+**Ahoy** is not a demo or tutorial clone.  
+It is a **production-focused chat app foundation** designed to scale — clean UI, predictable state management, and architecture that won’t collapse as features grow.
 
-🧩 Clean separation of Screens, Navigation, Routes, and ViewModels
+Built intentionally to learn **how real apps are structured**, not just how screens look.
 
-🗂 Dashboard screen with chat list UI
+---
 
-💬 Chat screen with message list & input handling
+## 🧠 Core Principles
 
-🔁 Reactive UI using StateFlow
+- **State > Screens**
+- **Navigation driven by state, not hacks**
+- **Composable UI with minimal coupling**
+- **Readable, scalable, production-first code**
 
-🧠 Architecture designed for scalability (MVVM + Repository)
+---
 
-🛠 Tech Stack
+## ✨ Features
 
-Language: Kotlin
+### 📱 UI & Navigation
+- Jetpack Compose with **Material 3**
+- State-driven navigation using **Navigation Compose**
+- Clear separation of **Screens, Routes, Navigation, and ViewModels**
 
-UI: Jetpack Compose (Material 3)
+### 🔐 Authentication
+- Auth flow powered by **ViewModel-managed state**
+- No UI-based navigation decisions
+- Single source of truth for auth state
 
-Navigation: Navigation Compose
+### 💬 Chat Experience
+- Dashboard with chat list UI
+- Chat screen with:
+  - Message list
+  - Input handling
+  - Reactive updates via `StateFlow`
 
-Architecture: MVVM
+### 🧩 Architecture
+- **MVVM + Repository**
+- Reactive UI using **StateFlow**
+- Designed for long-term scalability
+- Avoids over-engineering while staying production-ready
 
-State Management: StateFlow
+---
 
-Build System: Gradle (KTS)
+## 🛠 Tech Stack
 
-📂 Project Structure
+| Layer | Technology |
+|------|-----------|
+| Language | Kotlin |
+| UI | Jetpack Compose (Material 3) |
+| Navigation | Navigation Compose |
+| Architecture | MVVM |
+| State | StateFlow |
+| Backend | Firebase (Auth + Firestore) |
+| Build System | Gradle (KTS) |
+
+---
+
+## 📂 Project Structure
+
+```text
 com.example.ahoy
 │
-├── authentication   # Auth screen, state & ViewModel
-├── navigation       # AppNavigation & routes
-├── screens          # Dashboard & Chat UI
-├── data             # Models
-├── repository       # Data repositories
-├── ui.theme         # App theme
-└── MainActivity.kt  # App entry point
-
-🔐 Firebase Setup (Required)
-
-This project uses Firebase for authentication.
-
-To run the app locally:
-
-Create a Firebase project
-
-Add an Android app with the same package name
-
-Download google-services.json
-
-Place it inside the app/ directory
-
-⚠️ google-services.json is intentionally not committed for security reasons.
-
-🚧 Work in Progress
-
- Auth flow with state-based navigation
-
- Dashboard & Chat UI
-
- Clean navigation architecture
-
- Dashboard ViewModel & repository hookup
-
- Real-time chat messages
-
- Firestore integration
-
- Message delivery states (sent / delivered / read)
-
-🧠 Learning Goals
-
-This project focuses on:
-
-Building state-driven Compose UIs
-
-Proper navigation without tight coupling
-
-Clean separation of UI, logic, and state
-
-Writing Android code that scales beyond MVPs
-
-Avoiding over-engineering while staying production-ready
-
-▶️ How to Run
-
-Clone the repository
-
-Open in Android Studio
-
-Add google-services.json (see Firebase Setup)
-
-Sync Gradle
-
-Run on emulator or device (API 26+)
-
-📌 Status
-
-🚀 Core architecture complete
-Actively developing real-time features and backend integration.
-
-📄 License
-
-This project is open-source and intended for learning and experimentation.
+├── authentication        # Auth screens, state & ViewModel
+├── navigation            # AppNavigation & routes
+├── screens               # Dashboard & Chat UI
+├── data                  # Models & DTOs
+├── repository            # Data repositories
+├── ui.theme              # Material theme & styling
+└── MainActivity.kt       # App entry point
