@@ -1,83 +1,115 @@
-# Ahoy – Jetpack Compose Chat App 🚀
+Ahoy – Jetpack Compose Chat App 🚀
 
-Ahoy is a chat application built using **Jetpack Compose** and **Navigation Compose**, focused on clean UI, modern Android architecture, and scalable code structure.
+Ahoy is a modern Android chat application built using Jetpack Compose and Navigation Compose, focused on clean UI, state-driven navigation, and production-ready architecture.
 
-This project is currently in active development and serves as a foundation for a real-time chat app.
+This project is actively developed as a real-world chat app foundation, not a demo or tutorial clone.
 
----
+✨ Features
 
-## ✨ Features
+📱 Modern UI built with Jetpack Compose (Material 3)
 
-* 📱 Modern UI built with Jetpack Compose
-* 🧭 Navigation using Navigation Compose
-* 🧩 Clean separation of Screens, Routes, and Navigation
-* 🗂 Dashboard screen with chat list UI
-* 💬 Chat screen with message input layout
-* 🧪 Preview-friendly composables
-* 🧠 Architecture ready for ViewModels & Repository pattern
+🧭 State-driven navigation using Navigation Compose
 
----
+🔐 Authentication flow using ViewModel-managed auth state
 
-## 🛠 Tech Stack
+🧩 Clean separation of Screens, Navigation, Routes, and ViewModels
 
-* **Language:** Kotlin
-* **UI:** Jetpack Compose (Material 3)
-* **Navigation:** Navigation Compose
-* **Architecture:** MVVM (in progress)
-* **Build System:** Gradle (KTS)
+🗂 Dashboard screen with chat list UI
 
----
+💬 Chat screen with message list & input handling
 
-## 📂 Project Structure
+🔁 Reactive UI using StateFlow
 
-```
+🧠 Architecture designed for scalability (MVVM + Repository)
+
+🛠 Tech Stack
+
+Language: Kotlin
+
+UI: Jetpack Compose (Material 3)
+
+Navigation: Navigation Compose
+
+Architecture: MVVM
+
+State Management: StateFlow
+
+Build System: Gradle (KTS)
+
+📂 Project Structure
 com.example.ahoy
 │
-├── navigation       # App navigation & routes
-├── screens          # Compose UI screens
+├── authentication   # Auth screen, state & ViewModel
+├── navigation       # AppNavigation & routes
+├── screens          # Dashboard & Chat UI
+├── data             # Models
+├── repository       # Data repositories
 ├── ui.theme         # App theme
 └── MainActivity.kt  # App entry point
-```
 
----
+🔐 Firebase Setup (Required)
 
-## 🚧 Work in Progress
+This project uses Firebase for authentication.
 
-* [ ] Add ViewModels for Dashboard & Chat
-* [ ] Integrate authentication
-* [ ] Load user data from repository
-* [ ] Real-time chat messages
-* [ ] Firebase integration
+To run the app locally:
 
----
+Create a Firebase project
 
-## 🧠 Learning Goals
+Add an Android app with the same package name
+
+Download google-services.json
+
+Place it inside the app/ directory
+
+⚠️ google-services.json is intentionally not committed for security reasons.
+
+🚧 Work in Progress
+
+ Auth flow with state-based navigation
+
+ Dashboard & Chat UI
+
+ Clean navigation architecture
+
+ Dashboard ViewModel & repository hookup
+
+ Real-time chat messages
+
+ Firestore integration
+
+ Message delivery states (sent / delivered / read)
+
+🧠 Learning Goals
 
 This project focuses on:
 
-* Understanding declarative UI with Compose
-* Proper navigation handling
-* Avoiding over-engineering while staying scalable
-* Building production-ready Android architecture
+Building state-driven Compose UIs
 
----
+Proper navigation without tight coupling
 
-## ▶️ How to Run
+Clean separation of UI, logic, and state
 
-1. Clone the repository
-2. Open in Android Studio
-3. Sync Gradle
-4. Run on emulator or device (API 26+)
+Writing Android code that scales beyond MVPs
 
----
+Avoiding over-engineering while staying production-ready
 
-## 📌 Status
+▶️ How to Run
 
-🚀 **Foundation complete**
-Actively developing core features.
+Clone the repository
 
----
+Open in Android Studio
 
-## 📄 License
+Add google-services.json (see Firebase Setup)
 
-This project is open-source and available for learning purposes.
+Sync Gradle
+
+Run on emulator or device (API 26+)
+
+📌 Status
+
+🚀 Core architecture complete
+Actively developing real-time features and backend integration.
+
+📄 License
+
+This project is open-source and intended for learning and experimentation.
